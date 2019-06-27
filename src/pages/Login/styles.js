@@ -33,5 +33,12 @@ export const Container = styled.div`
       padding: ${metrics.baseMargin}px ${metrics.basePadding}px;
       border-style: none;
     }
+
+    > span {
+      color: ${colors.danger};
+      font-size: 15px;
+      font-weight: bolder;
+      text-align: center;
+    }
   }
 `;
