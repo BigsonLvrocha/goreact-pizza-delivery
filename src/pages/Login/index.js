@@ -1,11 +1,18 @@
 import React from 'react';
 import PizzaLayout from '../../components/Layouts/Pizza';
-
-// import { Container } from './styles';
+import Logo from '../../Assets/logo@3x.png';
+import { Container } from './styles';
 
 const Login = () => (
   <PizzaLayout>
-    <h1>Hello from Login Page</h1>
+    <Container>
+      <img src={Logo} alt="pizza logo" />
+      <form>
+        <input placeholder="Seu e-mail" type="email" />
+        <input placeholder="Senha secreta" type="password" />
+        <button type="submit">Entrar</button>
+      </form>
+    </Container>
   </PizzaLayout>
 );
 
