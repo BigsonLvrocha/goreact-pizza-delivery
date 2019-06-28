@@ -12,7 +12,16 @@ const OrderSizeItem = ({ index, size }) => (
       />
     </span>
     <div className="content">
-      <span className="title">{size.productType.cart_name}</span>
+      <span className="title">
+        {size.pivot.amount > 1 && (
+        <b>
+          {size.pivot.amount}
+x
+          {' '}
+        </b>
+        )}
+        {size.productType.cart_name}
+      </span>
       <span className="size">{size.cart_name}</span>
     </div>
   </Container>
@@ -31,6 +40,9 @@ OrderSizeItem.propTypes = {
         url: PropTypes.string.isRequired,
       }).isRequired,
       cart_name: PropTypes.string.isRequired,
+    }).isRequired,
+    pivot: PropTypes.shape({
+      amount: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
 };
