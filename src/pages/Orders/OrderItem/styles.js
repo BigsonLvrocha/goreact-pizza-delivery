@@ -48,7 +48,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: ${750 + 2 * metrics.baseMargin}px;
+    width: ${750 + 2 * metrics.baseMargin + 6}px;
   }
 
   span.observations {
