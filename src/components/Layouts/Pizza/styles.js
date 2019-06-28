@@ -10,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  overflow: hidden;
 `;
 
 export const BackImage = styled.img`
@@ -18,4 +19,5 @@ export const BackImage = styled.img`
   height: 100%;
   min-width: 100%;
   z-index: -1;
+  overflow: hidden;
 `;
