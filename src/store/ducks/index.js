@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import session from './session';
-import orders from './order';
+import order from './order';
 
 export default combineReducers({
   session,
-  orders,
+  order,
 });
