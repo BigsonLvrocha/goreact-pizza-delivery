@@ -7,7 +7,7 @@ import { Container } from './styles';
 import Logo from '../../../Assets/logo.png';
 import Bag from '../../../Assets/DC71C255-1647-4C11-A43D-857455429624@1x.png';
 
-const Main = ({ loggedUserName, logout }) => (
+const Main = ({ loggedUserName, logout, children }) => (
   <Container>
     <nav>
       <div className="logo">
@@ -27,12 +27,14 @@ const Main = ({ loggedUserName, logout }) => (
         </div>
       </div>
     </nav>
+    { children }
   </Container>
 );
 
 Main.propTypes = {
   loggedUserName: PropTypes.string.isRequired,
   logout: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 const mapStateToProps = state => ({
