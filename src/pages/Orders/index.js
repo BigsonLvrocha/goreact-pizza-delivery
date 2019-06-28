@@ -7,7 +7,7 @@ import OrderItem from './OrderItem';
 const Orders = () => (
   <Layout>
     <Container>
-      <span className="title">Hello from orders page</span>
+      <span className="title">Últimos pedidos</span>
       <ul>
         {data.map(item => (
           <OrderItem order={item} key={item.id} />
