@@ -1,5 +1,6 @@
 // Types
 export const Types = {
+  FETCH_LOGIN_STORAGE: 'session/FETCH_LOGIN_STORAGE',
   LOGIN_REQUEST: 'session/LOGIN_REQUEST',
   LOGIN_SUCCESS: 'session/LOGIN_SUCCESS',
   LOGIN_FAILURE: 'session/LOGIN_FAILURE',
@@ -8,6 +9,7 @@ export const Types = {
 
 // reducer
 const INITIAL_STATE = {
+  userChecked: false,
   isLoading: false,
   adminData: null,
   adminToken: null,
@@ -28,6 +30,7 @@ export default function session(state = INITIAL_STATE, { type, payload }) {
         isLoading: false,
         adminData: payload.data,
         adminToken: payload.token,
+        userChecked: true,
       };
     case Types.LOGIN_FAILURE:
       return {
@@ -36,6 +39,7 @@ export default function session(state = INITIAL_STATE, { type, payload }) {
         isLoading: false,
         adminData: null,
         adminToken: null,
+        userChecked: true,
       };
     case Types.LOGOUT:
       return {
@@ -51,6 +55,9 @@ export default function session(state = INITIAL_STATE, { type, payload }) {
 }
 
 export const Creators = {
+  fetchLoginStorage: () => ({
+    type: Types.FETCH_LOGIN_STORAGE,
+  }),
   loginRequest: (email, password) => ({
     type: Types.LOGIN_REQUEST,
     payload: {
