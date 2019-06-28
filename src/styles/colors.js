@@ -9,6 +9,7 @@ export default {
 
   primary: '#E5293E',
   secundary: '#706e7b',
+  navigation: 'rgb(11,32,49)',
   success: '#9DCA83',
   danger: '#e5293e',
   yellow: '#e2ae44',
