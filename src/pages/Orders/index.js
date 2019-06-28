@@ -1,11 +1,19 @@
 import React from 'react';
 import Layout from '../../components/Layouts/Main';
-
-// import { Container } from './styles';
+import data from './mockedData';
+import { Container } from './styles';
+import OrderItem from './OrderItem';
 
 const Orders = () => (
   <Layout>
-    <h1>Hello from orders page</h1>
+    <Container>
+      <span className="title">Hello from orders page</span>
+      <ul>
+        {data.map(item => (
+          <OrderItem order={item} key={item.id} />
+        ))}
+      </ul>
+    </Container>
   </Layout>
 );
 
