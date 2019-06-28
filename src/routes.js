@@ -22,7 +22,7 @@ Routes.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  isUserLogged: state.session.adminData === null || state.session.adminToken === null,
+  isUserLogged: !(state.session.adminData === null || state.session.adminToken === null),
 });
 
 export default connect(mapStateToProps)(Routes);
