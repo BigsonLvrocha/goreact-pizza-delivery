@@ -8,7 +8,6 @@ export const Container = styled.div`
   padding: ${metrics.basePadding}px;
   -webkit-box-shadow: 0px 0px 20px -9px #000000;
   box-shadow: 0px 0px 20px -9px #000000;
-  width: 650;
   margin-top: ${metrics.baseMargin}px;
 
   span.title {
@@ -48,7 +47,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: ${750 + 2 * metrics.baseMargin + 6}px;
+    width: ${3 * 230 + 2 * metrics.baseMargin}px;
   }
 
   span.observations {

@@ -4,10 +4,10 @@ import { metrics, colors } from '../../styles';
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  width: ${250 - 2 - metrics.basePadding * 2}px;
+  width: ${230 - 2 - metrics.basePadding * 2}px;
   padding: ${metrics.baseMargin}px ${metrics.basePadding}px;
   border-radius: ${metrics.baseRadius * 2}px;
-  justify-content: space-between;
+  justify-content: flex-start;
   border: 1px solid ${colors.lighter};
   margin-top: ${metrics.baseMargin}px;
   &.middle {
@@ -19,10 +19,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 60px;
+    width: 60px;
   }
 
   div.content {
-    padding: ${metrics.baseMargin}px;
+    padding: ${metrics.baseMargin / 2}px ${metrics.basePadding / 2}px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

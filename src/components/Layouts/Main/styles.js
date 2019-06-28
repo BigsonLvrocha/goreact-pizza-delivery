@@ -11,7 +11,7 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: ${metrics.basePadding}px;
+    padding: ${metrics.basePadding}px 0;
     background: ${colors.navigation};
     width: 100%;
 
