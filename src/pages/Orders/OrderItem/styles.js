@@ -40,10 +40,15 @@ export const Container = styled.div`
   }
 
   div.size-list {
-    margin-top: ${metrics.basePadding}px;
-    padding: ${metrics.basePadding}px 0;
+    margin-top: ${metrics.baseMargin}px;
+    padding-bottom: ${metrics.baseMargin}px;
     border-top: 1px solid ${colors.lighter};
     border-bottom: 1px solid ${colors.lighter};
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: ${750 + 2 * metrics.baseMargin}px;
   }
 
   span.observations {
@@ -52,6 +57,6 @@ export const Container = styled.div`
     color: #706e7b;
     letter-spacing: 0;
     text-align: left;
-    margin-top: ${metrics.basePadding}px;
+    margin-top: ${metrics.baseMargin}px;
   }
 `;

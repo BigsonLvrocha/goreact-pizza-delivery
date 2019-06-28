@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { Container } from './styles';
+import OrderSizeItem from '../../../components/OrderSizeItem';
 
 const OrderItem = ({ order }) => (
   <Container>
@@ -26,7 +27,11 @@ const OrderItem = ({ order }) => (
         currency: 'BRL',
       })}
     </span>
-    <div className="size-list">Size list</div>
+    <div className="size-list">
+      {order.sizes.map((item, index) => (
+        <OrderSizeItem size={item} key={item.pivot.id} index={index} />
+      ))}
+    </div>
     <span className="observations">
       <b>Observações: </b>
       {order.observations}
@@ -43,6 +48,7 @@ OrderItem.propTypes = {
     created_at: PropTypes.string.isRequired,
     total: PropTypes.number.isRequired,
     observations: PropTypes.string,
+    sizes: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   }).isRequired,
 };
 
